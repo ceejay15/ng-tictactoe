@@ -1,0 +1,20 @@
+<div class="container">
+      <div class="header">
+        <h1 class="text-primary">TIC TAC TOE  <br/>        
+          <app-score></app-score> : <app-score></app-score>          
+        </h1> 
+        <div *ngIf="showQ">
+          <h3 class="text-secondary">Pick your tile symbol</h3>
+          <button class="btn-large tictac tilepick" (click)="tilepick('X')">X</button> 
+          <button class="btn-large tactoe tilepick" (click)="tilepick('O')">O</button>  
+          <h3 class="text-primary">
+              You picked: {{tile}}     
+          </h3>
+        </div>
+          <div *ngIf="showplay"><button class="btn-large play" (click)="playgame()">Play</button></div>
+      </div>
+      <mat-divider></mat-divider>     
+       <app-board *ngIf="showBoard" [tile]="tile" [computer]="computer"></app-board>
+      <mat-divider></mat-divider>        
+     <div class="footer">Angular TicTacToe &copy; 2020</div>   
+</div>
