@@ -1,12 +1,22 @@
+ 
+<div *ngIf="hasWinner" class="text-secondary"><h2>{{winner}} WON!</h2></div>
+{{player}}
 <mat-grid-list cols="3" rowHeight="3:1">
-    <mat-grid-tile class="{{tile=='X'? 'tictac' : 'tactoe'}}" (click)="checkSlot(0)">{{board[0]}}</mat-grid-tile>        
-    <mat-grid-tile class="{{tile=='X'? 'tictac' : 'tactoe'}}" (click)="checkSlot(1)">{{board[1]}}</mat-grid-tile>
-    <mat-grid-tile class="{{tile=='X'? 'tictac' : 'tactoe'}}" (click)="checkSlot(2)">{{board[2]}}</mat-grid-tile>
-    <mat-grid-tile class="{{tile=='X'? 'tictac' : 'tactoe'}}" (click)="checkSlot(3)">{{board[3]}}</mat-grid-tile>
-    <mat-grid-tile class="{{tile=='X'? 'tictac' : 'tactoe'}}" (click)="checkSlot(4)">{{board[4]}}</mat-grid-tile>
-    <mat-grid-tile class="{{tile=='X'? 'tictac' : 'tactoe'}}" (click)="checkSlot(5)">{{board[5]}}</mat-grid-tile>
-    <mat-grid-tile class="{{tile=='X'? 'tictac' : 'tactoe'}}" (click)="checkSlot(6)">{{board[6]}}</mat-grid-tile>        
-    <mat-grid-tile class="{{tile=='X'? 'tictac' : 'tactoe'}}" (click)="checkSlot(7)">{{board[7]}}</mat-grid-tile>                
-    <mat-grid-tile class="{{tile=='X'? 'tictac' : 'tactoe'}}" (click)="checkSlot(8)">{{board[8]}}</mat-grid-tile>
+    <mat-grid-tile (click)="checkSlot(0)">{{board[0]}}</mat-grid-tile>        
+    <mat-grid-tile (click)="checkSlot(1)"><span>{{board[1]}}</span></mat-grid-tile>
+    <mat-grid-tile (click)="checkSlot(2)"><span>{{board[2]}}</span></mat-grid-tile>
+    <mat-grid-tile (click)="checkSlot(3)"><span>{{board[3]}}</span></mat-grid-tile>
+    <mat-grid-tile (click)="checkSlot(4)"><span>{{board[4]}}</span></mat-grid-tile>
+    <mat-grid-tile (click)="checkSlot(5)"><span>{{board[5]}}</span></mat-grid-tile>
+    <mat-grid-tile (click)="checkSlot(6)"><span>{{board[6]}}</span></mat-grid-tile>        
+    <mat-grid-tile (click)="checkSlot(7)"><span>{{board[7]}}</span></mat-grid-tile>                
+    <mat-grid-tile (click)="checkSlot(8)"><span>{{board[8]}}</span></mat-grid-tile>
 </mat-grid-list>
+<br/>
+<div *ngIf="hasWinner">
+    <button class="btn-large play" (click)="reset()">Reset</button>
+</div>
+
+
+
 

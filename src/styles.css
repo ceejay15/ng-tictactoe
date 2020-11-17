@@ -86,6 +86,16 @@ mat-divider{
       color:#fefeda;
 }
 
+.default-container{
+    max-height: 720px;
+}
+
+.pick-container{
+    /* background-color:salmon; */
+    padding: 0.2rem 0.1rem;
+    justify-content: center;
+}
+
 .footer{
       font-size:11px;
       padding: 15px 2px;
@@ -140,7 +150,9 @@ mat-divider{
             max-width: 250px;
             line-height:25px;
             margin:10px 10px;
-            
+            padding:5px 10px;
+            font-size:20px;
+            justify-content: center;
      } 
 
     .tictac, .tactoe{
